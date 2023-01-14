@@ -1,0 +1,7 @@
+services:
+  app:
+    build:
+      context: .
+    container_name: workflow
+    ports:
+      - 8081:8081

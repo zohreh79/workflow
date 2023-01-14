@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "d34fcde3-408d-44da-9601-f2bb8ebb6bac",
+		"name": "Questionnaire",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22960075"
+	},
+	"item": [
+		{
+			"name": "Start process",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"medicalNumber\":\"6985-b-1212\",\r\n    \"doctorHelp\": \"Azad\",\r\n    \"surgeryNoInyear\": 80,\r\n    \"harmPurporst\": true,\r\n    \"clinicAddress\": \"Tehran- Punak- p453\",\r\n    \"clinicTelephone\": \"02158744639\",\r\n    \"hospitalAddress\": \"Tehran- Vanak- p256\",\r\n    \"hospitalTelephone\": \"02163988172\",\r\n    \"homeAddress\": \"Tehran- Pasdaran- p132\",\r\n    \"homeTelephone\": \"02185633571\",\r\n    \"resident\": true,\r\n    \"plasticSurgeryCover\": true,\r\n    \"residentAmount\": 75000000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/start",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user taskList",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8081/user-taskList/person2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user-taskList",
+						"person2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user questionnaire",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/userQuestionnaire/person2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"userQuestionnaire",
+						"person2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Answer questionnaire",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/answer/ca42d2b3-8c2c-11ed-b255-523eaaedac51/accept",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"answer",
+						"ca42d2b3-8c2c-11ed-b255-523eaaedac51",
+						"accept"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Amendment task with Questionnaire body and userId and taskId and answer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"medicalNumber\":\"6985-b-12ddggd12\",\r\n    \"doctorHelp\": \"Azad\",\r\n    \"surgeryNoInyear\": 80,\r\n    \"harmPurporst\": true,\r\n    \"clinicAddress\": \"Tehran- Punak- p453\",\r\n    \"clinicTelephone\": \"02158744639\",\r\n    \"hospitalAddress\": \"Tehran- Shahran- p256\",\r\n    \"hospitalTelephone\": \"02163988172\",\r\n    \"homeAddress\": \"Tehran- Pasdaran- p132\",\r\n    \"homeTelephone\": \"02185633571\",\r\n    \"resident\": true,\r\n    \"plasticSurgeryCover\": true,\r\n    \"residentAmount\": 75000000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/correctionQuestionnaire/a16099a9-8c2e-11ed-94fa-523eaaedac51",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"correctionQuestionnaire",
+						"a16099a9-8c2e-11ed-94fa-523eaaedac51"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
