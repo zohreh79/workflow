@@ -4,7 +4,6 @@ import com.payeshgaran.workflow.model.Person;
 import com.payeshgaran.workflow.repository.PersonRepository;
 import org.camunda.bpm.engine.IdentityService;
 import org.camunda.bpm.engine.ProcessEngines;
-import org.camunda.bpm.engine.identity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -75,7 +74,7 @@ public class WorkflowApplication {
             Person person3 = personRepository.getByPriority(3L);
             Person person4 = personRepository.getByPriority(4L);
 
-            User user1 = identityService.newUser(person1.getUserId());
+            org.camunda.bpm.engine.identity.User user1 = identityService.newUser(person1.getUserId());
             user1.setId(person1.getUserId());
             user1.setFirstName(person1.getFirstName());
             user1.setLastName(person1.getLastName());
@@ -86,7 +85,7 @@ public class WorkflowApplication {
                 identityService.saveUser(user1);
             }
 
-            User user2 = identityService.newUser(person2.getUserId());
+            org.camunda.bpm.engine.identity.User user2 = identityService.newUser(person2.getUserId());
             user2.setId(person2.getUserId());
             user2.setFirstName(person2.getFirstName());
             user2.setLastName(person2.getLastName());
@@ -97,7 +96,7 @@ public class WorkflowApplication {
                 identityService.saveUser(user2);
             }
 
-            User user3 = identityService.newUser(person3.getUserId());
+            org.camunda.bpm.engine.identity.User user3 = identityService.newUser(person3.getUserId());
             user3.setId(person3.getUserId());
             user3.setFirstName(person3.getFirstName());
             user3.setLastName(person3.getLastName());
@@ -108,7 +107,7 @@ public class WorkflowApplication {
                 identityService.saveUser(user3);
             }
 
-            User user4 = identityService.newUser(person4.getUserId());
+            org.camunda.bpm.engine.identity.User user4 = identityService.newUser(person4.getUserId());
             user4.setId(person4.getUserId());
             user4.setFirstName(person4.getFirstName());
             user4.setLastName(person4.getLastName());
