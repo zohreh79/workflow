@@ -10207,3 +10207,21 @@ org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (
 	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
 	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
 	at java.base/java.lang.Thread.run(Thread.java:832)
+2023-01-23 15:23:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "drop table if exists [*]person CASCADE "; expected "identifier"; SQL statement:
+drop table if exists person CASCADE  [42001-214]
+2023-01-23 15:23:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]person (id bigint not null, email varchar(255), first_name varchar(255), last_name varchar(255), password varchar(255), priority bigint, user_id varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table person (id bigint not null, email varchar(255), first_name varchar(255), last_name varchar(255), password varchar(255), priority bigint, user_id varchar(255), primary key (id)) [42001-214]
+2023-01-23 15:23:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into [*]person (email, first_name, last_name, password, priority, user_id, id) values (?, ?, ?, ?, ?, ?, ?)"; expected "identifier"; SQL statement:
+insert into person (email, first_name, last_name, password, priority, user_id, id) values (?, ?, ?, ?, ?, ?, ?) [42001-214]
+2023-01-23 15:23:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "drop table if exists [*]person CASCADE "; expected "identifier"; SQL statement:
+drop table if exists person CASCADE  [42001-214]
+2023-01-23 15:23:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]person (id bigint not null, email varchar(255), first_name varchar(255), last_name varchar(255), password varchar(255), priority bigint, user_id varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table person (id bigint not null, email varchar(255), first_name varchar(255), last_name varchar(255), password varchar(255), priority bigint, user_id varchar(255), primary key (id)) [42001-214]
+2023-01-23 15:23:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into [*]person (email, first_name, last_name, password, priority, user_id, id) values (?, ?, ?, ?, ?, ?, ?)"; expected "identifier"; SQL statement:
+insert into person (email, first_name, last_name, password, priority, user_id, id) values (?, ?, ?, ?, ?, ?, ?) [42001-214]
